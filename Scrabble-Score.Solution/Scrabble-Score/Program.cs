@@ -9,9 +9,15 @@ class Program
         Console.WriteLine("Please enter a word:");
         string input = Console.ReadLine();
         ScrabbleScorer scorer = new ScrabbleScorer();
-        if (scorer.DetermineScore(input) == -1)
+        int score = scorer.DetermineScore(input);
+        if (score == -1)
         {
             Console.WriteLine("Alphabetical input only. Please try again.");
+            Main();
+        }
+        else 
+        {
+            Console.WriteLine("Your score is: " + score);
         }
         
 

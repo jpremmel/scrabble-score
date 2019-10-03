@@ -19,5 +19,11 @@ namespace Scrabble.Test
         {
             Assert.AreEqual(2, testScrabbleScorer.DetermineScore("d"));
         }
+
+        [TestMethod]
+        public void DetermineScore_WholeWord_5()
+        {
+            Assert.AreEqual(5, testScrabbleScorer.DetermineScore("cat"));
+        }
     }
 }

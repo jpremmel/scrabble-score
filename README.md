@@ -8,7 +8,9 @@
 
 | Behavior | Input | Output |
 | -------- | :---------: | :---------: |
-|  |  |  |
+| The program only accepts alphabetical input | "10" | "Try again." |
+| The program determines the Scrabble score of a single letter input | "D" | "2" |
+| The program adds the Scrabble scores of each letter in the input word | "cat" | "5" |
 
 
 ## Setup/Installation Requirements

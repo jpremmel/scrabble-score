@@ -7,7 +7,7 @@ namespace Scrabble.Test
     public class ScrabbleScorerTest
     {
 
-        [TestMethod]
-        
+        // [TestMethod]
+
     }
 }

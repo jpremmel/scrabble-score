@@ -17,42 +17,45 @@ namespace Scrabble
             else
             {
                 string word = input.ToLower();
-                for(int i = 0; i < 10; i++)
+                for(int j = 0; j < word.Length; j++)
                 {
-                    if (word[0] == letters[i])
+                    for(int i = 0; i < 10; i++)
                     {
-                        score ++;
+                        if (word[j] == letters[i])
+                        {
+                            score ++;
+                        }
                     }
-                }
-                for(int i = 12; i < 16; i++)
-                {
-                    if (word[0] == letters[i])
+                    for(int i = 12; i < 16; i++)
                     {
-                       score += 3;
+                        if (word[j] == letters[i])
+                        {
+                        score += 3;
+                        }
                     }
-                }
-                for(int i = 16; i < 21; i++)
-                {
-                    if (word[0] == letters[i])
+                    for(int i = 16; i < 21; i++)
                     {
-                       score += 4;
+                        if (word[j] == letters[i])
+                        {
+                        score += 4;
+                        }
                     }
-                }
-                if (word[0] == letters[10] || word[0] == letters[11])
-                {
-                    score += 2;
-                }
-                if (word[0] == letters[21])
-                {
-                    score += 5;
-                }
-                if (word[0] == letters[22] || word[0] == letters[23])
-                {
-                    score += 8;
-                }
-                if (word[0] == letters[24] || word[0] == letters[25])
-                {
-                    score += 10;
+                    if (word[j] == letters[10] || word[j] == letters[11])
+                    {
+                        score += 2;
+                    }
+                    if (word[j] == letters[21])
+                    {
+                        score += 5;
+                    }
+                    if (word[j] == letters[22] || word[j] == letters[23])
+                    {
+                        score += 8;
+                    }
+                    if (word[j] == letters[24] || word[j] == letters[25])
+                    {
+                        score += 10;
+                    }
                 }
             }
             return score;
